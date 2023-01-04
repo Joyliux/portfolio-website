@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Joy Li | UX Designer</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+
+        <style> @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap'); </style>
+
     </head>
 
-    <body>
+    <body class="index-page">
         <!-- For the header -->
         <header>
             <div>
                 <img src="./img/joy-logo.svg" alt="logo">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Work</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html" class="nav">Work</a></li>
+                        <li><a href="about.html" class="nav">About</a></li>
+                        <li><a href="#contact" class="nav">Contact</a></li>
                     </ul>
                     
                 </nav>
             </div>
         </header>
        <!-- For the hero section -->
-        <div>
+        <div id="hero-section">
             <!-- For the whole section block -->
             <div>
                 <!-- For the container wrapper -->
                 <h1>
                     Hello, I'm Joy 
                 </h1>
-                <span>an architect turned UX designer from New York</span>
+                <h3>
+                    <span>an architect turned</span> 
+                    <span class="intro">UX designer</span>
+                    <span>from New York</span>
+                </h3>
+                
             </div>
         </div>
 
         <!-- For your work/projects -->
-        <div>
+        <div id="work-section">
             <!-- For container wrapper -->
             <div>
-                <h2>My work</h2>
+                <h4 class="page-title">My work</h4>
             </div>
             <!-- For project 1 OLIVE -->
             <div>
@@ -51,9 +63,9 @@
                 <!-- For bottom row -->
                 <div>
                     <h3>Olive</h3>
-                    <span>UX Researcher, UX/UI Designer</span>
+                    <span class="role-note">UX Researcher, UX/UI Designer</span>
                     <p>An responsive web portal where users store, monitor, and safely share health information of any kind as needed</p>
-                    <a href="olive.html">View the Project</a>
+                    <a href="olive.html">Read More</a>
                 </div>
             </div>
             <!-- For project 2 Quizlet -->
@@ -70,9 +82,9 @@
                     <!-- For bottom row -->
                     <div>
                         <h3>Quizlet</h3>
-                        <span>UX Researcher, UX/UI Designer</span>
+                        <span class="role-note">UX Researcher, UX/UI Designer</span>
                         <p>A classic flashcard learning app redesigned, making it more accessible and delightful to use</p>
-                        <a href="#">View the Project</a>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
             </div>

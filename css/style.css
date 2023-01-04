@@ -1,0 +1,136 @@
+/*
+Colors used:
+Primary Color (dark grey, text body): #333333;
+Primary Color (tangerine): #E37222;
+Secondary Color (light grey): #666666;
+*/
+
+body {
+    background-color: #ffffff;
+    font-family: 'Proza Libre', sans-serif;
+    font: size 16px; /*Sets the front size to 16px*/
+    font-weight: 300; /* Sets the font weight to 300*/
+    line-height: 1.6; /* Sets the line-height to 1.6 * the font-size*/
+    color: #333333
+  }
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif; 
+    line-height: 1.4;
+    color:#333333;
+    text-transform: capitalize;
+  }
+  h1 {
+    font-size: 2.75em;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 2.25em;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 1.75em;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+  }
+
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    color: #E37222;
+    text-decoration: none; /* No underlining */
+  }
+  a:visited { /* visited link */
+    color: #cb6319;
+  }
+  a:hover {
+    color: #c05000;
+    text-decoration: underline; /* Underlining when hovering over a link */
+  }
+  a:active { /* selected link */
+    color: #c05000;
+  }
+  a:hover,
+  a:focus {
+    color: #c05000;
+    text-decoration: underline; /* save with hovering over a link */
+  }
+
+ 
+/* 
+class section 
+added class to body, index-page, about-page, olive-page. will define styling later as needed
+*/ 
+  .nav {/* class selector, for navigation menu */
+    color:#333333;
+    text-transform: uppercase;
+  }
+
+  .intro{/* an architect turned ux designer from new york in different color */
+    font-size: 1em;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: #E37222;
+  }
+
+  .role-note{/* role in a project */
+    font-size: 1em;
+    font-family: 'Proza Libre', sans-serif;
+    color: #666666;
+  }
+
+  .page-title{/* for "my work" and "about" */
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1.2em
+  }
+
+  .button {
+    display: inline-block; /* since the <a> tag is inline by default, need to change this to inline-block */
+    background-color: #E37222;
+    color: #ffffff; /* needed to override the default link color */
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #c05000; /* width of the border, type, color */
+    transition: 0.2s opacity;
+  }
+  .button:hover {
+    opacity: 0.8; /* Reduces the opacity of the button to 80% */
+    text-decoration: none;
+  }
+  .button:active {
+    opacity: 0.8; /* Reduces the opacity of the button to 80% */
+    text-decoration: none;
+  }
+
+  .button-contact {
+    background-color: transparent;
+    color: #E37222;
+    text-transform: uppercase;
+    border: 2px solid #E37222;
+  }
+  .button-contact:hover {
+    background-color: #c05000;
+    color: #ffffff;
+  }
+  .button-contact:active {
+    background-color: #c05000;
+    color: #ffffff;
+  }
+
+  /* 
+  ID section 
+  added hero-section, work section, and contact to index html. will define styling later as needed
+  */
+  #hero-section {/* id selector */
+    color: green;  
+  }
+

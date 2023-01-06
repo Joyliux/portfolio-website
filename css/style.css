@@ -5,132 +5,623 @@ Primary Color (tangerine): #E37222;
 Secondary Color (light grey): #666666;
 */
 
-body {
-    background-color: #ffffff;
+* {
+  box-sizing: border-box;
+}
+
+/* || GENERAL STYLES  */
+
+  header {
+    padding: 10px 0; /* Add a 10px top bottom */
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  p {
+    margin-block-start: 0.5em;
+  }
+
+  body {
+    background-color:rgb(255, 255, 255);
     font-family: 'Proza Libre', sans-serif;
-    font: size 16px; /*Sets the front size to 16px*/
+    font-size: 16px; /*Sets the front size to 16px*/
     font-weight: 300; /* Sets the font weight to 300*/
     line-height: 1.6; /* Sets the line-height to 1.6 * the font-size*/
     color: #333333
   }
 
-h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', serif; 
-    line-height: 1.4;
-    color:#333333;
-    text-transform: capitalize;
-  }
-  h1 {
-    font-size: 2.75em;
-    font-weight: 700;
-  }
-  
-  h2 {
-    font-size: 2.25em;
-    font-weight: 700;
-  }
-  
-  h3 {
-    font-size: 1.75em;
-    font-weight: 400;
-  }
-  h4 {
-    font-size: 1.35em;
-    font-weight: 400;
-  }
+
+  h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif; 
+      line-height: 1.4;
+      color:#333333;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-size: 2.75em;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      font-size: 2.25em;
+      font-weight: 700;
+    }
+    
+    h3 {
+      font-size: 1.75em;
+      font-weight: 400;
+    }
+    h4 {
+      font-size: 1.35em;
+      font-weight: 400;
+    }
 
 
-  img {
-    width: 100%;
-  }
+    img {
+      width: 100%;
+    }
 
-  a {
-    color: #E37222;
-    text-decoration: none; /* No underlining */
-  }
-  a:visited { /* visited link */
-    color: #cb6319;
-  }
-  a:hover {
-    color: #c05000;
-    text-decoration: underline; /* Underlining when hovering over a link */
-  }
-  a:active { /* selected link */
-    color: #c05000;
-  }
-  a:hover,
-  a:focus {
-    color: #c05000;
-    text-decoration: underline; /* save with hovering over a link */
-  }
+    a {
+      color: #E37222;
+      text-decoration: none; /* No underlining */
+    }
+    a:visited { /* visited link */
+      color: #cb6319;
+    }
+    a:hover {
+      color: #c05000;
+      text-decoration: underline; /* Underlining when hovering over a link */
+    }
+    a:active { /* selected link */
+      color: #c05000;
+    }
+    a:hover,
+    a:focus {
+      color: #c05000;
+      text-decoration: underline; /* save with hovering over a link */
+    }
 
  
-/* 
-class section 
-added class to body, index-page, about-page, olive-page. will define styling later as needed
-*/ 
-  .nav {/* class selector, for navigation menu */
-    color:#333333;
-    text-transform: uppercase;
-  }
+/* || CLASS - MOSTLY INDEX AND ABOUT PAGE STYLES */ 
 
-  .intro{/* an architect turned ux designer from new york in different color */
-    font-size: 1em;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    color: #E37222;
-  }
+    .intro-color {/* an architect turned ux designer from new york in different color */
+      font-size: 1em;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      color: #E37222;
+    }
 
-  .role-note{/* role in a project */
-    font-size: 1em;
-    font-family: 'Proza Libre', sans-serif;
-    color: #666666;
-  }
+    .intro {
+      text-transform: none;
+    }
 
-  .page-title{/* for "my work" and "about" */
-    font-family: 'Proza Libre', sans-serif;
-    font-size: 1.2em
-  }
+    .role-note{/* role in a project */
+      font-size: 0.8em;
+      font-family: 'Proza Libre', sans-serif;
+      color: #666666;
+    }
 
-  .button {
-    display: inline-block; /* since the <a> tag is inline by default, need to change this to inline-block */
-    background-color: #E37222;
-    color: #ffffff; /* needed to override the default link color */
-    font-weight: 400;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #c05000; /* width of the border, type, color */
-    transition: 0.2s opacity;
-  }
-  .button:hover {
-    opacity: 0.8; /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
-  }
-  .button:active {
-    opacity: 0.8; /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
-  }
+    .page-title{/* for "my work" and "about" */
+      font-family: 'Proza Libre', sans-serif;
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-  .button-contact {
-    background-color: transparent;
-    color: #E37222;
-    text-transform: uppercase;
-    border: 2px solid #E37222;
-  }
-  .button-contact:hover {
-    background-color: #c05000;
-    color: #ffffff;
-  }
-  .button-contact:active {
-    background-color: #c05000;
-    color: #ffffff;
-  }
+    .button {
+      display: inline-block; /* since the <a> tag is inline by default, need to change this to inline-block */
+      background-color: #E37222;
+      color: #ffffff; /* needed to override the default link color */
+      font-weight: 400;
+      padding: 10px;
+      border-radius: 3px;
+      border-bottom: 2px solid #c05000; /* width of the border, type, color */
+      transition: 0.2s opacity;
+    }
+    .button:hover {
+      opacity: 0.8; /* Reduces the opacity of the button to 80% */
+      text-decoration: none;
+    }
+    .button:active {
+      opacity: 0.8; /* Reduces the opacity of the button to 80% */
+      text-decoration: none;
+    }
 
-  /* 
-  ID section 
-  added hero-section, work section, and contact to index html. will define styling later as needed
-  */
-  #hero-section {/* id selector */
-    color: green;  
+    .button-contact {
+      background-color: transparent;
+      color: #E37222;
+      text-transform: uppercase;
+      border: 2px solid #E37222;
+    }
+    .button-contact:hover {
+      background-color: #c05000;
+      color: #ffffff;
+    }
+    .button-contact:active {
+      background-color: #c05000;
+      color: #ffffff;
+    }
+
+    /* ID - MOSTLY INDEX AND ABOUT PAGE STYLES 
+      added hero, work, and contact to index html. will define styling later as needed
+      added index-page, about-page, olive-page. will define styling later as needed
+      */
+      #hero h1 {/* id selector */
+        text-align: center;  /* Centers text */
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 1;
+
+      }
+
+      #hero {
+        background-color: #ffffff;
+        padding: 0 0;
+        display:inline-block;
+        width: 100%;
+      }
+
+      #work h3 {
+        font-weight: 700;
+      }
+
+      #about-page h3 {
+        text-align: center;
+      }
+      #work h3{/* reduced spacing */
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+      }
+      
+      #work a { /* cannot see difference */
+        margin-bottom: 20px;
+      }
+      
+      #contact {
+        background-color: #f4f4f4;
+        margin-top: 60px;
+      }
+      
+      #contact h4 {/* id selector */
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0;
+        font-family: 'Proza Libre', sans-serif;
+        font-size: 0.8em;
+        text-align: center;
+      }
+      
+      #contact p {/* id selector */
+        padding-top: 0px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        font-family: 'Proza Libre', sans-serif;
+        font-size: 0.6em;
+        text-align: center;
+      }
+      
+      #skill-tool-list {
+        padding: 0;
+        margin: 0 auto;
+      }
+      
+      #about-page h3 {
+        margin-bottom: 0.5em;
+      }
+
+/* || GENERAL STYLES layout styling */
+
+    .container { /* wrapper to hold the layout*/
+      padding:0 15px;
+    }
+
+    .row {
+      margin:25px 0; /* 25px top and bottom, 0 left and right */
+    }
+
+    .row-project {
+      margin: 0;
+    }
+
+    .logo {
+      max-width:150px;
+    }
+
+    .non-bulletin-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .indie-project {
+      margin-bottom: 45px;
+    }
+
+/* || GENERAL STYLE NAVIGATION BAR */
+      
+      nav { /* to place nav completely in header */
+        display:inline-block;
+        width: 100%;
+      }
+
+      nav > ul {
+        list-style-type: none; /* remove bullet points */
+        padding: 0
+      }
+
+      nav > ul > li {
+        display: inline-block /* put them on the same line */
+      }
+
+      nav > ul > li > a {
+        padding: 0 15px; /* put some space in-between, no coma btw two values */
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+  /*  GENERAL COLOR SETTING  */
+
+      #prim-bg-white {
+        background-color:#ffffff
+      }
+
+      #prim-cta-bg-green {
+        background-color: #295214
+      }
+
+      #secd-green {
+        background-color: #B2C9A7;
+      }
+
+      #secd-blue {
+        background-color: #3E8798;
+      }
+
+      #secd-light-green {
+        background-color: #F4F7F2;
+      }
+
+      #text-grey {
+        background-color: #333333;
+      }
+
+
+/* || OLIVE STYLES */
+
+  /* OLIVE TYPOGRAPHY AND SPACING AROUND IT */
+
+      #olive-page h3 { /* titles under chapter title, some are green and some are white */
+        font-weight: 600;
+        margin-bottom: 0px;
+        text-transform: capitalize;
+      }
+
+      #olive-page h2{ /* chapter title */
+        color:#295214;
+        font-family:'Proza Libre';
+        font-weight:bold;
+        text-transform: capitalize;
+        margin-bottom:5px;
+      }
+
+      #olive-page h4{ /* smaller title */
+        font-weight:bold;
+        margin-bottom:0;
+        margin-top: 0;
+      }
+
+      #error-fixing-list h5 {/* to make spacing tighter */
+        margin: 0;
+        padding: 0;
+      }
+
+      #error-fixing-list p {/* to make spacing tighter */
+        margin: 0;
+        padding: 0;
+      }
+
+      #design-process-anno { /* design process annotation */
+        display: inline-block;
+        color:#295214;
+        font-size: 0.6em;
+        font-weight: 600;
+        padding: 0 8px;
+        text-transform: uppercase;
+      }
+    
+    /*  LIST TEXT */
+
+      .non-bulletin-list-horiz { /* design process annotation closer to diagram */
+        list-style-type: none;
+        padding: 0;
+        margin:0;
+      }
+    
+      .list-item-inline {
+        display: inline-block;
+        padding: 0 3em;
+      }
+
+      #style-guide-color li {
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+
+      #style-guide-color canvas {
+        float:left;
+        margin:0 5px;
+        width: 80px; 
+        height: 80px; 
+        border:1px solid #666666;
+      }
+
+    /*  TEXT ALIGNMENT */
+      .text-right-align {
+        text-align: right;
+      }
+    
+      .text-center-align {
+        text-align: center;
+      }
+        
+    /*  TEXT COLOR */
+      .white-text { /* text inside green box */
+        color:#ffffff
+      }
+    
+      .green-text { /* green titles */
+        color:#295214;
+      }
+
+      #style-guide h4 {
+        text-transform: uppercase;
+        font-family: 'Proza Libre';
+        font-size: 0.95em;
+      }
+
+    /*  TEXT SIZE AND STYLE */
+
+      .chapter-number { /* smaller chapter no with big chapter title */
+        font-size: 0.4em;
+      }
+      
+      .text-smaller {
+        font-size: 0.8em;
+      }
+      
+      .text-bigger {
+        font-size: 1.5em;
+      }
+    
+      .text-bold {
+        font-weight:bold;
+      }
+    
+      .text-light {
+        font-weight: lighter;
+      }
+    
+      .text-italic {
+        font-style: italic;
+      }
+    
+      .text-underline {
+        text-decoration: underline;
+      }
+
+      .text-cap-word {
+        text-transform: capitalize;
+      }
+
+      .text-anno { /* annotation for competitive analysis */
+        font-size: 0.7em;
+        line-height: 1.3;
+        margin-block-end: 0em;
+        padding:0;
+      }
+
+      #testing-info h4 { /* bolder titles */
+        font-weight: bold;
+        font-family: 'Proza Libre';
+        font-size: 0.95em;
+      }
+
+      .font-sail {
+        font-family: 'sail';
+      }
+
+      .font-open-sans {
+        font-family: 'open sans';
+      }
+      
+    /*  TEXT INDENT */
+      .text-after-icon { /* indent not working */
+        display:inline-block;
+        text-indent: -10em;
+      }
+    
+      .text-indent { /* not working */
+        text-indent: 3em
+      }
+    
+  
+  /*  OLIVE - BACKGROUND COLOR */    
+      .beige-bg { /* beige box */
+        background-color: #E7E2CA;
+        padding: 10px 0;
+      }
+
+      .green-bg { /* dark green box */
+        background-color: #295214;
+        padding: 10px 0;
+      }
+
+      .white-bg { /* white bg over beige */
+        background-color: #ffffff;
+        padding: 10px 0;
+      }
+
+  /*  OLIVE - IMAGE STYLE */ 
+
+    .olive-icon { /* png icons */
+      max-width: 24px;
+      border-radius: 50%;
+      border: 2px solid rgb(255, 255, 255);
+      background-color: #EEF2E6;
+      margin-right:5px;
+    }
+
+    .img-right-align {
+      float:right;
+    }
+
+    .img-left-align {
+      float:left;
+    }
+
+    .img-center-align {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .img-center-align-alt {
+      text-align: center;
+    }
+
+    .img-left-bottom-align {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      padding: 0px;
+    }
+
+    .img-float { /* not in use */
+      float: left;
+      margin:0 5px;
+    }
+
+    .img-max800{
+      max-width: 800px;
+    }
+    
+    .img-max280{
+      max-width: 280px;
+    }
+
+  /*  OLIVE - LAYOUT STYLE */
+
+    /* OLIVE - table style */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #ffffff;
+        text-align: left;
+        line-height: 1.2;
+        padding: 5px;
+        font-weight: normal;
+      }
+
+      .td-width-40 {
+        width: 40%;
+      }
+
+      .td-width-36px {
+        width:36px;
+      }
+
+      #green-table td {
+        border-color: #295214;
+      }
+
+      #green-table th {
+        border-color: #295214;
+      }
+
+    /* OLIVE - column layout */      
+      .column-2 { /* Create two equal columns that floats next to each other */
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+
+    /* OLIVE - other layout */
+      .relative {
+        position: relative;
+      }
+
+      .box-wrap-1 { /* to wrap text */
+        inline-size: 100px;
+        overflow-wrap: break-word;
+      }
+
+      .container-top-bottom { /* to give top margin */
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display:block;
+      }
+
+      .container-top-bottom-2 { /* to give top margin */
+        padding: 0.5em 1em 2em 1em;
+        display:block;
+      }
+
+      .container-bottom-padding { /* if it is svg, it has to write inside svg tag */
+        padding-bottom: 30px;
+      }
+
+      .margin-top-bottom-zero { 
+        margin: 0;
+      }
+
+      .inline-block { /* test layout */
+        display: inline-block;
+      }
+
+      .list-half-width {
+        width: 50%;
+        padding: 0 0px;
+      }
+
+      .style-guide-color-block { /* for primary and second color block layout, fail to work, not in use */
+        width: 50%;
+        height: 150px;
+        margin: 0 5px;
+        border: 2px solid rgb(0, 0, 0);
+      }
+
+      .text-right-padding { /* to make some space btw words in one line */
+        padding-right: 0.5em;
+      }
+
+
+  /* OLIVE pdf link: click to view more */
+      
+      .olive-pdf-link {
+        text-transform: capitalize;
+        font-weight: 400;
+        padding: 5px 10px;
+      }
+
+      .olive-pdf-link:hover {
+        color: #5e9c3f;
+        text-decoration: underline;
+      }
+      .olive-pdf-link:active {
+        color: #5e9c3f;
+        text-decoration: underline;
+        margin:0;
+        padding:0;
+      }
+
+  /* OLIVE for testing */
+
+  .box-outline { /*  just for testing  */
+    border: 5px solid rgb(0, 0, 0);
   }
 

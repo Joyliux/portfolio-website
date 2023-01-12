@@ -22,13 +22,17 @@
         <!-- For the header -->
         <header>
             <div class="container relative">
-                <img src="./img/joy-logo.svg" alt="logo" class="logo">
-                <div class="container-test topBotomBordersIn inline-block img-right-align" id="nav-bar">
+                <div class="navtoggle" id="myNavtoggle">
+                    <img src="./img/joy-logo.svg" alt="name-logo" class="logo">
                     
-                        <a href="index.html">Work</a>  
-                        <a href="about.html">About</a>
-                        <a href="#contact">Contact</a>
-                                    
+                    <div class="container-nav inline-block img-right-align" id="nav-bar">
+                        
+                            <a href="index.html">Work</a>  
+                            <a href="about.html">About</a>
+                            <a href="#contact" onclick="menuToggle()">Contact</a>
+                            <a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    
                 </div>
             </div>
         </header> <!-- end of header -->
@@ -64,7 +68,7 @@
                         design process
                     </h3>
                     <p>
-                        The User-Centered Design approach was implemented throughout the process. This approach started with user research to identify problems, and then used iterative design to continuously improve the product to by testing, design critique sessions, and modification.
+                        The User-Centered Design approach was implemented throughout the process. It started with user research to identify problems, and then used iterative design to continuously improve the product by usablility testing, design critique sessions, and alignment with style guide.
                     </p>
                     
                     <picture class="img-center-align img-max512">
@@ -706,6 +710,10 @@
                         <img src="./img/olive/png/olive-lofi@4x.png" alt="paper prototyping 01">
                     </picture>
                 </div><!-- end of lo-fi  -->
+                
+                <div> <!-- give more space between elements -->
+                    <p class="white-text">abc</p>
+                </div>
 
             </div><!-- end of 03  -->
 
@@ -1753,51 +1761,61 @@
                         <img src="./img/olive/img-olive-rendering02@2x.png" alt="olive">
                     </picture>
                 </div>
-
-                <!-- For onboarding -->
-                <div class="container container-top-bottom">
-                    <div>
-                        <h4 class="text-center-align">
-                            onboarding
-                        </h4>
-                    </div>
-                    <div>
-                        <video width="300" height="600" class="img-center-align">
-                            <source src="./video/olive-onboarding.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-
-                <!-- For home screen, data record and goal setting -->
-                <div class="container container-top-bottom">
-                    <div>
-                        <h4 class="text-center-align">
-                            data record and goal setting
-                        </h4>
-                    </div>
-                    <div >
-                        <video width="300" height="600" class="img-center-align">
-                            <source src="./video/olive-add-data.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>  
                 
-                <!-- For sharing and education -->
-                <div class="container container-top-bottom">
-                    <div>
-                        <h4 class="text-center-align">
-                            data sharing and education
-                        </h4>
+                <!-- For three videos -->
+                <div class="container row"> 
+                    <!-- For onboarding -->
+                    <div class="container-top-bottom col-md-6 col-lg-4">
+                        <div>
+                            <h4 class="text-center-align">
+                                onboarding
+                            </h4>
+                        </div>
+                        <div>
+                            <video class="img-center-align" autoplay controls>  
+                                <!-- Coding note: shall not include width and height, to add autoplay controls -->
+                                <source src="./video/olive-onboarding.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
-                    <div>
-                        <video width="300" height="600" class="img-center-align">
-                            <source src="./video/olive-share.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>                
+
+                    <!-- For home screen, data record and goal setting -->
+                
+                    <div class="container-top-bottom col-md-6 col-lg-4">
+                        <div>
+                            <h4 class="text-center-align">
+                                data record and goal setting
+                            </h4>
+                        </div>
+                        <div >
+                            <video class="img-center-align" autoplay controls>
+                                <source src="./video/olive-add-data.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>  
+                    
+                    <!-- For sharing and education -->
+                    <div class="container-top-bottom col-md-6 col-lg-4">
+                        <div>
+                            <h4 class="text-center-align">
+                                data sharing and education
+                            </h4>
+                        </div>
+                        <div>
+                            <video class="img-center-align" autoplay controls>
+                                <source src="./video/olive-share.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div> 
+                
+                </div><!-- end of three videos -->
+
+                <div> <!-- give more space between elements -->
+                    <p class="white-text">abc</p>
+                </div>
                 
             </div><!-- end of 06mockup  -->
 
@@ -1908,6 +1926,10 @@
         
         </footer> <!-- end of footer -->
 
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         
     </body>

@@ -33,7 +33,6 @@ Small devices (smaller than 640px)
 
   header {
     padding: 10px 0; /* Add a 10px top bottom */
-    text-align: center;
     background-color: rgb(255, 255, 255);
   }
 
@@ -176,7 +175,7 @@ Small devices (smaller than 640px)
 
       #hero h1 {/* id selector */
         text-align: center;  /* Centers text */
-        padding-top: 1em;
+        padding-top: 0.5em;
         padding-bottom: 0;
         line-height: 1;
 
@@ -256,10 +255,12 @@ Small devices (smaller than 640px)
         margin-bottom: 0.5em;
       }
 
+
 /* || GENERAL STYLES layout styling */
 
     .container { /* wrapper to hold the layout*/
       padding:0 15px;
+      max-width: 1024px;
     }
 
     .row {
@@ -272,6 +273,7 @@ Small devices (smaller than 640px)
 
     .logo {
       max-width:100px;
+      color:#333333;
     }
 
     .non-bulletin-list {
@@ -283,29 +285,84 @@ Small devices (smaller than 640px)
       margin-bottom: 45px;
     }
 
-/* || GENERAL STYLE NAVIGATION BAR */
+/* || HEADER & NAVIGATION BAR for small screen  */
       
-    #nav-bar a {
-      text-transform: uppercase;
-      font-family: 'Proza Libre';
-      font-weight:500;
-      font-size: 1em;
+    header{
+      background-color: white;
+    }
+    li{
+      list-style: none;
+    }
+    
+    a{
+      color: #E37222;
+      text-decoration: none;
     }
 
-      nav > ul {
-        list-style-type: none; /* remove bullet points */
-        padding: 0
-      }
+    .container{
+      max-width: 1224px;
+      width: 90%;
+      margin: 0 auto;
+    }
 
-      nav > ul > li {
-        display: inline-block /* put them on the same line */
-      }
+    .navbar{ /* name brand + menu */
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-branding{ /* name brand, cannot change the color to grey*/
+      font-size: 2.5em;
+      font-family: "Zen Tokyo Zoo";
+    }
 
-      nav > ul > li > a {
-        padding: 0 15px; /* put some space in-between, no coma btw two values */
-        text-transform: uppercase;
-        font-weight: 500;
-      }
+    #nav-branding-color {
+      color:#333333
+    }
+
+    .hamburger{ 
+      display: block;
+    }
+   
+    .bar{ /*  each line of 3 lines */
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      background-color: #666666;
+    } 
+
+    .hamburger.active .bar:nth-child(2){ /*  2nd line disappear */
+      opacity: 0;
+    }
+   .hamburger.active .bar:nth-child(1){ /*  1st line transform */
+      transform: translateY(8px) rotate(45deg);
+    }
+   .hamburger.active .bar:nth-child(3){ /*  3st line transform */
+      transform: translateY(-8px) rotate(-45deg);
+    }
+   .nav-menu{ /*  menu including work about contact, transform to block*/
+      position: fixed;
+      right: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #ffdfc8;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+   .nav-item{ /*  each item in the menu, to space out */
+      margin: 16px 0;
+    }
+   .nav-menu.active{ /*  what does it do? */
+      right: 0;
+    }
+
+
 
   /*  GENERAL COLOR SETTING  */
 
@@ -636,6 +693,10 @@ Small devices (smaller than 640px)
       border-radius: 15px;
     }
     
+    #olive-page video{
+      max-width: 300px;
+    }
+
   /*  OLIVE - LAYOUT STYLE */
 
     /* OLIVE - table style */
@@ -817,7 +878,7 @@ Small devices (smaller than 640px)
         color:#295214;
       }
 
-      .olive-pdf-link:hover, a:focus {
+      .olive-pdf-link:hover {
         color: #ffffff;
         text-decoration: underline;
         background-image: linear-gradient(to bottom right, #295214, #B2C9A7)
@@ -833,7 +894,7 @@ Small devices (smaller than 640px)
 
 
 
-  /* OLIVE for testing */
+  /* CSS ANIMATION  */
 
   .box-outline { /*  just for testing  */
     border: 3px solid rgb(0, 0, 0);
@@ -963,10 +1024,27 @@ Medium devices (640px and larger)
     text-align: unset;
   }
 
-  nav { /* nav bar to the right */
-    width: auto;
-    float: right;
-    margin-top: 4px;
+  /* || nav bar for med and lg screen||  */
+
+  .nav-menu { /*  menu including work about contact*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  .nav-link{ /*  each item in the menu */
+    transition: 0.3s ease-out;
+  }
+  .nav-link:hover{ /*  change color when hover */
+    color: dodgerblue;
+  }
+  .hamburger{ /* 3 lines */
+    display: none;
+  }
+  
+
+  #hero h1 {/* header farther away from hero text in bigger screen */
+    padding-top: 1em;
   }
 
   .col-md-6 { /*  two columns split 50/50 across the screen i.e. 6 grid columns out of 12 */
@@ -1023,7 +1101,7 @@ Medium devices (640px and larger)
   }
   
   #container-80p{
-    max-width: 80%;
+    max-width: 85%;
     margin:10px auto;
     text-align: center;
   }
@@ -1068,11 +1146,69 @@ Large devices (1024px or larger)
     padding:10px;
   }
 
+  .col-lg-4 { 
+    width: 33%;
+    padding:10px;
+  }
+
   .container {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
+
+      /* Navigation bar animation testout - Top and Bottom borders come in */
+
+    .container-nav
+    {
+      margin: 0 auto;
+      padding: 1em 1em;
+      text-align: center;
+    }
+
+    .container-nav a
+    {
+        color: #E37222;
+        text-decoration: none;
+        font: 20px Raleway;
+        margin: 0px 10px;
+        padding: 10px 10px;
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+    }
+
+    /* Top and Bottom borders come in */
+    div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+    {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: #E37222;
+        content: "";
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    div.topBotomBordersIn a:before
+    {
+        top: 0px;
+        transform: translateY(-10px);
+    }
+
+    div.topBotomBordersIn a:after
+    {
+        bottom: 0px;
+        transform: translateY(10px);
+    }
+
+    div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
 }
 
 /* ==============================
@@ -1082,54 +1218,3 @@ X-large devices (1440px or larger)
 }  
 
 
-/* Navigation bar animation testout - Top and Bottom borders come in */
-
-.container-nav
-{
-  margin: 0 auto;
-	padding: 1em 1em;
-	text-align: center;
-}
-
-.container-nav a
-{
-    color: #E37222;
-    text-decoration: none;
-    font: 20px Raleway;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-}
-
-/* Top and Bottom borders come in */
-div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
-{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: #E37222;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-div.topBotomBordersIn a:before
-{
-    top: 0px;
-    transform: translateY(-10px);
-}
-
-div.topBotomBordersIn a:after
-{
-    bottom: 0px;
-    transform: translateY(10px);
-}
-
-div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
-{
-    opacity: 1;
-    transform: translateY(0px);
-}

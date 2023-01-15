@@ -6,7 +6,9 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Sail&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
 
         <style> @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap'); </style>
         <script src="https://kit.fontawesome.com/804e8b6310.js" crossorigin="anonymous"></script>
@@ -14,30 +16,29 @@
 
     <body id="index-page">
         
-        <!-- For the header -->
+        <!--Header-->
         <header>
-            <div class="container"> 
-               <nav class="navbar">
-                  <a href="#" class="nav-branding" id="nav-branding-color">Joy Li</a>
-                  <ul class="nav-menu">
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">Work</a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
-                     </li>
-                  </ul>
-                  <div class="hamburger">
-                     <span class="bar"></span>
-                     <span class="bar"></span>
-                     <span class="bar"></span>
-                  </div>
-               </nav>
+            <div class="container">
+                <div class="navtoggle" id="myNavtoggle">
+                    <a href="index.html" class="nav-branding" id="name-logo">Joy Li</a>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Work</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li>
+                                <a href="#contact" onclick="menuToggle()">Contact</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                                    <i class="fas fa-bars"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-         </header><!-- end of header -->
+        </header>
+        <!--End Header-->
 
       <!-- For the hero section -->
         <div id="hero">

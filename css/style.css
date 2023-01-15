@@ -87,21 +87,22 @@ Small devices (smaller than 640px)
       text-decoration: none; /* No underlining */
     }
     a:visited { /* visited link */
-      color: #cb6319;
-    }
-    a:hover {
       color: #c05000;
-      text-decoration: underline; /* Underlining when hovering over a link */
     }
+
     a:active { /* selected link */
       color: #c05000;
     }
     a:hover,
     a:focus {
-      color: #c05000;
-      text-decoration: underline; /* save with hovering over a link */
+      color: orange;
+      text-decoration: none; /* save with hovering over a link */
     }
 
+    #name-logo:hover{
+      text-decoration: none;
+      color: #E37222;
+    }
  
 /* || CLASS - MOSTLY INDEX AND ABOUT PAGE STYLES */ 
 
@@ -124,9 +125,10 @@ Small devices (smaller than 640px)
 
     .page-title{/* for "my work" and "about" */
       font-family: 'Proza Libre', sans-serif;
-      font-size: 1.2em;
+      font-size: 1.3em;
       text-align: center;
       margin-bottom: 10px;
+      text-transform: capitalize;
     }
 
     .button {
@@ -271,11 +273,6 @@ Small devices (smaller than 640px)
       margin: 0;
     }
 
-    .logo {
-      max-width:100px;
-      color:#333333;
-    }
-
     .non-bulletin-list {
       list-style-type: none;
       padding: 0;
@@ -301,66 +298,78 @@ Small devices (smaller than 640px)
 
     .container{
       max-width: 1224px;
-      width: 90%;
       margin: 0 auto;
     }
 
-    .navbar{ /* name brand + menu */
-      min-height: 70px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
     .nav-branding{ /* name brand, cannot change the color to grey*/
       font-size: 2.5em;
       font-family: "Zen Tokyo Zoo";
     }
-
-    #nav-branding-color {
+    #name-logo{
       color:#333333
     }
 
-    .hamburger{ 
-      display: block;
-    }
-   
-    .bar{ /*  each line of 3 lines */
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      background-color: #666666;
-    } 
-
-    .hamburger.active .bar:nth-child(2){ /*  2nd line disappear */
-      opacity: 0;
-    }
-   .hamburger.active .bar:nth-child(1){ /*  1st line transform */
-      transform: translateY(8px) rotate(45deg);
-    }
-   .hamburger.active .bar:nth-child(3){ /*  3st line transform */
-      transform: translateY(-8px) rotate(-45deg);
-    }
-   .nav-menu{ /*  menu including work about contact, transform to block*/
-      position: fixed;
-      right: -100%;
-      top: 70px;
-      gap: 0;
-      flex-direction: column;
-      background-color: #ffdfc8;
+    nav {
+      display: inline-block;
       width: 100%;
-      text-align: center;
-      transition: 0.3s;
     }
-   .nav-item{ /*  each item in the menu, to space out */
-      margin: 16px 0;
+    
+    nav > ul {
+      list-style-type: none;
+      padding: 0;
     }
-   .nav-menu.active{ /*  what does it do? */
+    
+    nav > ul > li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    nav > ul > li > a {
+      display: inline-block;
+      padding: 0 15px;
+      color: #333333;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s ease-out;
+    }
+    
+    .navtoggle{
+      margin:0 0 0 0;
+     
+      
+    }
+    .navtoggle li:not(:last-child) {
+      display: none;
+    }
+    
+    .navtoggle, .navtoggle.responsive {
+      position: relative;
+    }
+    
+    /* our hamburger menu */
+    .navtoggle li .icon {
+      position: absolute;
       right: 0;
+      top: 2px;
+      margin-top: 12px;
+      font-size: 25px;
     }
+    
+    .navtoggle.responsive nav {
+      padding: 24px 0 0;
+    }
+    
+    .navtoggle.responsive li  {
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid rgba(255,127,80,0.5);
+    }
+    
+    .navtoggle.responsive li:last-child {
+      padding: 0 0 10px;
+    }
+    
 
 
 
@@ -870,7 +879,7 @@ Small devices (smaller than 640px)
         font-weight: 400;
         padding: 5px 10px 5px 10px;
         border-radius: 10px;
-        transition: 0.2s opacity; 
+        transition: 0.3s opacity; 
         color:#295214;
       }
 
@@ -1026,19 +1035,27 @@ Medium devices (640px and larger)
 
   /* || nav bar for med and lg screen||  */
 
-  .nav-menu { /*  menu including work about contact*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
   }
-  .nav-link{ /*  each item in the menu */
-    transition: 0.3s ease-out;
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
   }
-  .nav-link:hover{ /*  change color when hover */
-    color: dodgerblue;
+
+  nav > ul > li {
+    display: inline-block;
+    position: relative;
   }
-  .hamburger{ /* 3 lines */
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
     display: none;
   }
   
@@ -1122,9 +1139,14 @@ Medium devices (640px and larger)
   .white-bg { /* give space between problem statement and design process*/
     padding: 20px 10px 20px 10px;
   }
+
+  .page-title{/* for "my work" and "about" */
+    margin-top: 3em;
+  }
+
 }
 
-
+  
 
 /* ==============================
 Large devices (1024px or larger)
@@ -1157,57 +1179,6 @@ Large devices (1024px or larger)
     margin-right: auto;
   }
 
-      /* Navigation bar animation testout - Top and Bottom borders come in */
-
-    .container-nav
-    {
-      margin: 0 auto;
-      padding: 1em 1em;
-      text-align: center;
-    }
-
-    .container-nav a
-    {
-        color: #E37222;
-        text-decoration: none;
-        font: 20px Raleway;
-        margin: 0px 10px;
-        padding: 10px 10px;
-        position: relative;
-        z-index: 0;
-        cursor: pointer;
-    }
-
-    /* Top and Bottom borders come in */
-    div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
-    {
-        position: absolute;
-        left: 0px;
-        width: 100%;
-        height: 2px;
-        background: #E37222;
-        content: "";
-        opacity: 0;
-        transition: all 0.3s;
-    }
-
-    div.topBotomBordersIn a:before
-    {
-        top: 0px;
-        transform: translateY(-10px);
-    }
-
-    div.topBotomBordersIn a:after
-    {
-        bottom: 0px;
-        transform: translateY(10px);
-    }
-
-    div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
-    {
-        opacity: 1;
-        transform: translateY(0px);
-    }
 
 }
 

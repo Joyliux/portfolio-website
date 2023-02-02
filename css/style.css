@@ -1,7 +1,7 @@
 /*
 Colors used:
 Primary Color (dark grey, text body): #333333;
-Primary Color (tangerine): #E37222;
+Primary Color (tangerine): #C25700 (used to be #37222);
 Secondary Color (light grey): #666666;
 */
 
@@ -83,26 +83,28 @@ Small devices (smaller than 640px)
     }
 
     a {
-      color: #E37222;
+      color: #C25700;
       text-decoration: none; /* No underlining */
     }
     a:visited { /* visited link */
-      color: #c05000;
+      color: #333333;
     }
 
     a:active { /* selected link */
-      color: #c05000;
+      color:#C25700;
     }
     a:hover,
     a:focus {
-      color: orange;
+      color: #ff8400;
       text-decoration: none; /* save with hovering over a link */
     }
 
     #name-logo:hover{
       text-decoration: none;
-      color: #E37222;
+      color: #ff8400;
     }
+
+
  
 /* || CLASS - MOSTLY INDEX AND ABOUT PAGE STYLES */ 
 
@@ -110,7 +112,7 @@ Small devices (smaller than 640px)
       font-size: 1em;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
-      color: #E37222;
+      color: #C25700;
     }
 
     .intro {
@@ -123,7 +125,7 @@ Small devices (smaller than 640px)
       color: #666666;
     }
 
-    .page-title{/* for "my work" and "about" */
+    .page-title{/* for "my work" and "about me" */
       font-family: 'Proza Libre', sans-serif;
       font-size: 1.3em;
       text-align: center;
@@ -133,7 +135,7 @@ Small devices (smaller than 640px)
 
     .button {
       display: inline-block; /* since the <a> tag is inline by default, need to change this to inline-block */
-      background-color: #E37222;
+      background-color: #C25700;
       color: #ffffff; /* needed to override the default link color */
       font-weight: 400;
       padding: 10px;
@@ -152,9 +154,9 @@ Small devices (smaller than 640px)
 
     .button-contact {
       background-color: transparent;
-      color: #E37222;
+      color: #C25700;
       text-transform: uppercase;
-      border: 2px solid #E37222;
+      border: 2px solid #C25700;
     }
     .button-contact:hover {
       background-color: #c05000;
@@ -164,6 +166,8 @@ Small devices (smaller than 640px)
       background-color: #c05000;
       color: #ffffff;
     }
+
+
 
     /* ID - MOSTLY INDEX AND ABOUT PAGE STYLES 
       added hero, work, and contact to index html. will define styling later as needed
@@ -248,13 +252,17 @@ Small devices (smaller than 640px)
         opacity: 0.65;
       }
       
-      #skill-tool-list {
+      .skill-tool-list {
         padding: 0;
         margin: 0 auto;
       }
       
       #about-page h3 {
         margin-bottom: 0.5em;
+      }
+
+      a.hidden {
+        display: none;
       }
 
 
@@ -282,6 +290,10 @@ Small devices (smaller than 640px)
       margin-bottom: 45px;
     }
 
+    .hidden-elements{ /* to hide */
+      display: none
+    }
+
 /* || HEADER & NAVIGATION BAR for small screen  */
       
     header{
@@ -292,7 +304,7 @@ Small devices (smaller than 640px)
     }
     
     a{
-      color: #E37222;
+      color: #C25700;
       text-decoration: none;
     }
 
@@ -323,6 +335,7 @@ Small devices (smaller than 640px)
       display: inline-block;
       list-style-type: none;
       padding: 0;
+      line-height: 1em;
     }
     
     nav > ul > li > a {
@@ -336,9 +349,8 @@ Small devices (smaller than 640px)
     
     .navtoggle{
       margin:0 0 0 0;
-     
-      
     }
+
     .navtoggle li:not(:last-child) {
       display: none;
     }
@@ -348,7 +360,7 @@ Small devices (smaller than 640px)
     }
     
     /* our hamburger menu */
-    .navtoggle li .icon {
+    .navtoggle li .icon { /* ppp*/
       position: absolute;
       right: 0;
       top: 2px;
@@ -370,6 +382,9 @@ Small devices (smaller than 640px)
       padding: 0 0 10px;
     }
     
+    .navtoggle.icon:visited{
+      color:#333333
+    }
 
 
 
@@ -538,7 +553,7 @@ Small devices (smaller than 640px)
         padding:0;
       }
 
-      #testing-info h4 { /* bolder titles */
+      .testing-info h4 { /* bolder titles */
         font-weight: bold;
         font-family: 'Proza Libre';
         font-size: 0.95em;
@@ -706,6 +721,8 @@ Small devices (smaller than 640px)
       max-width: 300px;
     }
 
+
+
   /*  OLIVE - LAYOUT STYLE */
 
     /* OLIVE - table style */
@@ -785,7 +802,7 @@ Small devices (smaller than 640px)
         display:block;
       }
 
-      .container-top-bottom-2 { /* to give top margin */
+      .container-top-bottom-2 { /* to give margin */
         padding: 0.5em 1em 2em 1em;
         display:block;
       }
@@ -1117,7 +1134,7 @@ Medium devices (640px and larger)
     max-width: 280px;
   }
   
-  #container-80p{
+  .container-80p{
     max-width: 85%;
     margin:10px auto;
     text-align: center;
@@ -1179,6 +1196,14 @@ Large devices (1024px or larger)
     margin-right: auto;
   }
 
+  .vertical-center{
+    display: flex;
+    align-items: center;
+  }
+
+  .top-margin{
+    padding-top: 30px;
+  }
 
 }
 

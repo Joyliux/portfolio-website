@@ -87,7 +87,7 @@ Small devices (smaller than 640px)
       text-decoration: none; /* No underlining */
     }
     a:visited { /* visited link */
-      color: #333333;
+      color: #C25700;
     }
 
     a:active { /* selected link */
@@ -102,6 +102,10 @@ Small devices (smaller than 640px)
     #name-logo:hover{
       text-decoration: none;
       color: #ff8400;
+    }
+
+    .not-clickable {
+      pointer-events: none;
     }
 
 
@@ -231,11 +235,20 @@ Small devices (smaller than 640px)
       }
       
       #contact h4 {/* id selector */
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        margin: 0;
+        font-family: 'Proza Libre', sans-serif;
+        text-align: center;
+      }
+
+      #contact h5 {/* id selector */
+        padding-top: 0px;
+        padding-bottom: 0px;
         margin: 0;
         font-family: 'Proza Libre', sans-serif;
         font-size: 1em;
+        font-weight: 300;
         text-align: center;
       }
       
@@ -249,7 +262,14 @@ Small devices (smaller than 640px)
       }
 
       #contact svg{
-        opacity: 0.65;
+        opacity: 0.7;
+      }
+
+      .contact-container{ /* to show a high block of contact */
+        padding-top: 30px;
+        padding-bottom: 30px;
+        max-width: 1224px;
+        margin: 0 auto;
       }
       
       .skill-tool-list {
@@ -263,6 +283,10 @@ Small devices (smaller than 640px)
 
       a.hidden {
         display: none;
+      }
+
+      .bottom-padding{
+        padding-bottom: 50px;
       }
 
 
@@ -286,12 +310,28 @@ Small devices (smaller than 640px)
       padding: 0;
     }
 
+    .bulletin-list{
+      list-style-type:disc;
+    }
+
+    .bulletin-list-number{
+      list-style-type: decimal;
+    }
+
     .indie-project { /* to give more space between projects */
       margin-bottom: 45px;
     }
 
     .hidden-elements{ /* to hide */
       display: none
+    }
+
+    .display-block{
+      display:block;
+    }
+
+    .padding-top{
+      padding-top: 5em;
     }
 
 /* || HEADER & NAVIGATION BAR for small screen  */
@@ -506,6 +546,23 @@ Small devices (smaller than 640px)
         color:#295214;
       }
 
+      .orange-text { /* orange titles */
+        color:#C25700;
+        font-weight: 600;
+      }
+
+      .orange-text-light { /* orange titles */
+        color:#C25700;
+
+      }
+
+      .orange-text-button{
+        color:#C25700;
+        font-weight: 400;
+        padding:5px 10px;
+        
+      }
+
       #style-guide h4 {
         text-transform: uppercase;
         font-family: 'Proza Libre';
@@ -524,6 +581,10 @@ Small devices (smaller than 640px)
       
       .text-bigger {
         font-size: 1.5em;
+      }
+
+      .text-bigger-125em {
+        font-size: 1.25em;
       }
     
       .text-bold {
@@ -546,6 +607,10 @@ Small devices (smaller than 640px)
         text-transform: capitalize;
       }
 
+      .text-uppercase{
+        text-transform: uppercase;
+      }
+
       .text-anno { /* annotation for competitive analysis */
         font-size: 0.8em;
         line-height: 1.3;
@@ -566,6 +631,20 @@ Small devices (smaller than 640px)
       .font-open-sans {
         font-family: 'open sans';
       }
+
+      .website-typo-headlines{
+        font-size: 1.5em;
+        font-family: 'cormorant garamond';
+        font-weight:600;
+      
+      }
+
+      .website-typo-para{
+        font-size: 1em;
+        font-family: 'Proza Libre';
+        font-weight:500;
+      }
+
       
     /*  TEXT INDENT */
       .text-after-icon { /* indent not working */
@@ -608,6 +687,14 @@ Small devices (smaller than 640px)
         padding: 20px 0 20px 0;
       }
 
+      .orange-button-bg{
+        background-image: linear-gradient(to bottom right, #eeab7bd7, #f3e1d2,#f5ede6);
+        border-radius: 8px;
+        box-shadow:4px 4px #66666632;
+        margin-left: 0px;
+        margin-right:120px;
+      }
+
   /*  OLIVE - IMAGE STYLE */ 
 
     .olive-icon { /* png icons */
@@ -634,6 +721,8 @@ Small devices (smaller than 640px)
 
     .img-center-align-alt {
       text-align: center;
+      padding-top: 3em;
+      padding-bottom: 2em;
     }
 
     .img-left-bottom-align {
@@ -875,8 +964,8 @@ Small devices (smaller than 640px)
       }
 
       #contact a{ /* add spaces btw social media logo */
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
       }
 
 
@@ -917,8 +1006,83 @@ Small devices (smaller than 640px)
         padding:0;
       }
 
+  /* portfolio website case study style  */
+      .title-color-block{
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 8em 15px 8em 15px;
+        background-color: #EDDBCD;
+      }
 
+      .float-left{
+        float:left
+      }
 
+      #portfolio-site h2{
+        color:#C25700;
+        margin-block-start: 2em;
+      }
+
+      #portfolio-site h3{
+        color:#C25700;
+        margin-block-end:0.25em;
+
+      }
+
+      #portfolio-site h4{  /* title of research, ia, lo-fi wireframes, etc  */
+        color:#C25700;
+        font-family: Proza Libre;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-block-start: 2.5em;
+        margin-block-end:0.5em;
+
+      }
+
+      #portfolio-site h5{
+        text-transform: capitalize;
+        font-size: 0.9em;
+        font-weight:600;
+        margin-block-end:0.25em;
+        text-decoration:underline ;
+      }
+
+      .inline-title{
+        color:#C25700;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        font-weight:500;
+        display:flex;
+        align-items: center;
+      }
+
+      .indent-block{ /* portfolio website text next to icon, to indent  */
+        display:inline-block;
+        margin-left: 3em;
+      }
+
+      .width-33p{
+        width: 160px;
+        display: inline-block;
+      }
+
+      .top-margin-0{
+        margin-block-start: 0em;
+      }
+
+      .margin-left-1em{
+        margin-left: 1em;
+      }
+
+      .svg-padding{ /* make svg img smaller  */
+        padding: 0 60px 0px 60px;
+      }
+
+      .website-icon { /* png icons */
+        max-width: 36px;
+        margin-right:15px;
+      }
 
   /* CSS ANIMATION  */
 
@@ -1159,6 +1323,23 @@ Medium devices (640px and larger)
 
   .page-title{/* for "my work" and "about" */
     margin-top: 3em;
+  }
+
+  .width-33p{
+    width: 160px;
+  }
+
+  .website-typo-headlines{
+    text-align: center;
+  }
+
+  .website-typo-para{
+    text-align: center;
+  }
+
+  .orange-button-bg{
+    margin: 0 auto;
+  
   }
 
 }
